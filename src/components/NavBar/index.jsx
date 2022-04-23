@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from 'C:/Users/Lucas/Documents/CURSOS/CODER HOUSE/REACT/Desafios/Desafio 1/my-app/src/logo.png';
+import logo from '../../images/logo.png' 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../NavBar/styles.css';
 import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap';
@@ -29,7 +29,7 @@ function NavBar() {
                         <NavDropdown.Item href="#action/3.2">Bebidas</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.3">Postres</NavDropdown.Item>
                         </NavDropdown>
-                        <NavDropdown title={<div style={{display: "inline-block"}}><CartWidget></CartWidget></div>}>
+                        <NavDropdown title={<div style={{display: "inline-block"}}><CartWidget/></div>}>
                         <NavDropdown.Item href="#action/3.1">Sin items en el carrito</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>

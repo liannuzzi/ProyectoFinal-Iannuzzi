@@ -1,0 +1,32 @@
+.container-buttons{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid #212529;
+    margin-top: 10px;
+    padding:5px;
+
+}
+
+.control-button{
+    background-color: #f5f6f7;
+    border: 0px;
+    color: #212529;
+    
+}
+
+.contador{
+    font-weight: bold;    
+}
+
+.toCart-button{
+    font-style: italic;
+    color: #f5f6f7;
+    background-color: rgb(182, 17, 17);
+    border-radius: 7px;
+    margin: 10px 10px 10px 10px;
+    padding: 5px 30px 5px 30px;
+    letter-spacing: 1px;
+}
