@@ -1,6 +1,5 @@
 .itemList-container{
     display:flex;
-    justify-content:center;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
@@ -10,5 +9,5 @@
 .greeting-container{
     display:flex;
     justify-content: center;
-    align-items: center;
+    margin:30px 0px 30px 0px;
 }

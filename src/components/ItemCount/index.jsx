@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaPlus, FaMinus, FaShoppingCart } from 'react-icons/fa';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import '../ItemCount/styles.css';
 
 
@@ -34,6 +34,13 @@ function ItemCount ({stock,initial}) {
     }
 }
 
+useEffect(()=>{
+    if(contador===0){
+        setDisable(true);
+    }
+},[contador]);
+
+
 return ( 
     <div>
         <div className='container-buttons'>
@@ -54,7 +61,7 @@ return (
         </div>
         <div>
             <button
-            className='toCart-button'
+            className={`${disabled}? toCart-button-disabled : toCart-button`}
             onClick={addToCart}
             disabled={disabled}
             >
