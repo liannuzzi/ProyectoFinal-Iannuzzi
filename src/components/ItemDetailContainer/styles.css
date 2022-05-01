@@ -1,0 +1,11 @@
+.itemDetail-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    gap:  100px;
+    background-color: rgb(228, 226, 226);
+    height:100vh
+
+};
