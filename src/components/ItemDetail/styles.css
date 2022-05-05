@@ -1,4 +1,4 @@
-.item-card{
+.itemDetail-card{
     border: 3px solid  rgb(182, 17, 17);
     display: flex;
     flex-direction: column;
@@ -12,30 +12,30 @@
 
 }
 
-.item-title h4{
+.itemDetail-title h4{
     font-size: 25px;
     margin:0px 0px 20px 0px;
 
 }
 
-.item-info{
+.itemDetail-info{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.item-description{
+.itemDetail-description{
     padding: 20px 10px 0px 10px;
     font-size: 20px;
 }
 
-.item-price{
+.itemDetail-price{
     font-weight: bold;
     font-size: 25px;
 }
 
-.item-img{
+.itemDetail-img{
     width:400px;
     height: 300px;
     object-fit: cover;
