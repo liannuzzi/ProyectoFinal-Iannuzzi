@@ -1,3 +1,8 @@
+# E-commerce de comida
+    Proyecto orientado a la construcción de un E-commerce para una pizzería. Se utiliza JS, React js. y Bootstrap para su construcción.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
