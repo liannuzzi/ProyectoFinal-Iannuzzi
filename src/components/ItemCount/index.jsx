@@ -2,9 +2,10 @@ import React from 'react';
 import { FaPlus, FaMinus, FaShoppingCart } from 'react-icons/fa';
 import {useState, useEffect} from 'react';
 import '../ItemCount/styles.css';
+import { Link } from 'react-router-dom';
 
 
-function ItemCount ({stock,initial}) {
+function ItemCount ({stock,initial, onAdd}) {
 
     const[contador,setItemNum]= useState(initial);
     const [disabled, setDisable] = useState(true);
@@ -62,7 +63,10 @@ return (
         <div>
             <button
             className={`${disabled}? toCart-button-disabled : toCart-button`}
-            onClick={addToCart}
+            onClick={()=>{
+                addToCart();
+                onAdd(contador);
+            }}
             disabled={disabled}
             >
                 <FaShoppingCart/> Agregar al carrito 

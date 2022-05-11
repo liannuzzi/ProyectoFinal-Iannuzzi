@@ -12,8 +12,8 @@ function Item ({item}) {
                 <div>
                 <Link to={`/item/${item.id}`}>    
                     <img className='item-img'
-                    src={require(`../../images/Productos/${item.image}`)}
-                    alt="" />
+                    src={item.image}
+                    alt={item.title} />
                 </Link>
                 </div>
                 <div className='item-info'>
