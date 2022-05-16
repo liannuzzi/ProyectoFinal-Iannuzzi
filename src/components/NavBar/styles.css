@@ -3,7 +3,17 @@
     color: #FFFFFF8C;
 }
 
+.default-home-link:hover{
+    text-decoration: none;
+    color: white;
+}
 .default-link{
     text-decoration: none;
     color: black;
+}
+
+.default-link:hover{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }

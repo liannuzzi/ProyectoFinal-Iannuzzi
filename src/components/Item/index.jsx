@@ -21,7 +21,11 @@ function Item ({item}) {
                     <p className='item-price'>${item.price}</p>
                 </div>
                 <div>
-                    <ItemCount stock={10} initial={0} />
+                    <Link to={`/item/${item.id}`}>    
+                        <button>
+                            Ver Detalle
+                        </button>
+                    </Link>
                 </div>
             </div>
      );

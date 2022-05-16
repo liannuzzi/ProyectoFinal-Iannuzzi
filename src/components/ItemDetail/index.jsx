@@ -1,15 +1,20 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import '../../components/ItemDetail/styles.css'
 import ItemCount from '../../components/ItemCount';
 import {Link} from 'react-router-dom'
+import {useCartContext} from '../../context/CartContext'
 
 function ItemDetail(  {item}  ) {
 
     const [productQty,SetProductQty]=useState(null);
+    const { addItemToCart } =useCartContext();
+
+
+
     function addCart(quantityToAdd){
         SetProductQty(quantityToAdd);
-    }
-
+        addItemToCart(item,quantityToAdd)
+    };
 
     return (
         <div className='item-container'>

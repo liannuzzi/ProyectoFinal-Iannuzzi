@@ -26,15 +26,12 @@ function NavBar() {
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link><Link to={'/'} className='default-home-link'>Inicio</Link></Nav.Link>
-                        <Nav.Link href="#link"></Nav.Link>
-                        <NavDropdown title="Productos" id="basic-nav-dropdown">
+                        <NavDropdown title="Productos" id="basic-nav-dropdown" className='default-home-link'>
                         <NavDropdown.Item> <Link to={'category/Pizzas'} className='default-link' > Pizzas</Link></NavDropdown.Item>
                         <NavDropdown.Item><Link to={'category/Bebidas'} className='default-link'>Bebidas</Link></NavDropdown.Item>
                         <NavDropdown.Item><Link to={'/category/Postres'} className='default-link'>Postres</Link></NavDropdown.Item>
                         </NavDropdown>
-                        <NavDropdown title={<div style={{display: "inline-block"}}><CartWidget/></div>}>
-                        <NavDropdown.Item>Sin items en el carrito</NavDropdown.Item>
-                        </NavDropdown>
+                        <Nav.Link><Link to={'/cart'} className='default-home-link'><CartWidget/></Link></Nav.Link>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>

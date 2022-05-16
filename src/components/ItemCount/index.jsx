@@ -28,13 +28,6 @@ function ItemCount ({stock,initial, onAdd}) {
     }
     
 
-    const addToCart = () =>{
-        if(contador>0 && contador<=stock){
-        console.log(`Se agregaron ${contador} items al carrito`);
-
-    }
-}
-
 useEffect(()=>{
     if(contador===0){
         setDisable(true);
@@ -64,7 +57,7 @@ return (
             <button
             className={`${disabled}? toCart-button-disabled : toCart-button`}
             onClick={()=>{
-                addToCart();
+
                 onAdd(contador);
             }}
             disabled={disabled}
