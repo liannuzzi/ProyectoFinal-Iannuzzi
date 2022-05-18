@@ -2,7 +2,7 @@ import React from 'react';
 import { FaPlus, FaMinus, FaShoppingCart } from 'react-icons/fa';
 import {useState, useEffect} from 'react';
 import '../ItemCount/styles.css';
-import { Link } from 'react-router-dom';
+
 
 
 function ItemCount ({stock,initial, onAdd}) {

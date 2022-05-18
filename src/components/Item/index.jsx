@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../components/Item/styles.css'
-import ItemCount from '../ItemCount';
 
 function Item ({item}) {
     return ( 
@@ -22,7 +21,7 @@ function Item ({item}) {
                 </div>
                 <div>
                     <Link to={`/item/${item.id}`}>    
-                        <button>
+                        <button className='seeDetail-btn'>
                             Ver Detalle
                         </button>
                     </Link>

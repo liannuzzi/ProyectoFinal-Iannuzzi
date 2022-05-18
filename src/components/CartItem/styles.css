@@ -1,0 +1,20 @@
+.cartItem-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    border: 3px solid rgb(182, 17, 17);
+    background-color: rgb(228, 226, 226);
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+.trash-btn{
+    border: none;
+    background-color: rgb(228, 226, 226);
+    color:rgb(182, 17, 17);
+    font-size: large;
+}

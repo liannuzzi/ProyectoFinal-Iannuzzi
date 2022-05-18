@@ -5,8 +5,13 @@ import '../NavBar/styles.css';
 import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap';
 import CartWidget from '../CartWidget';
 import {Link} from 'react-router-dom';
+import { useCartContext } from '../../context/CartContext';
 
 function NavBar() {
+
+
+    const {cartList,totalCartItems}=useCartContext();
+
     return ( 
         <div>
             <Navbar bg='dark' variant='dark' expand="lg">
@@ -31,7 +36,9 @@ function NavBar() {
                         <NavDropdown.Item><Link to={'category/Bebidas'} className='default-link'>Bebidas</Link></NavDropdown.Item>
                         <NavDropdown.Item><Link to={'/category/Postres'} className='default-link'>Postres</Link></NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link><Link to={'/cart'} className='default-home-link'><CartWidget/></Link></Nav.Link>
+                        {cartList.length!==0?
+                        <Nav.Link><Link to={'/cart'} className='default-home-link'><span>{totalCartItems()}<CartWidget/></span></Link></Nav.Link>:
+                        ''}
                     </Nav>
                     </Navbar.Collapse>
                 </Container>

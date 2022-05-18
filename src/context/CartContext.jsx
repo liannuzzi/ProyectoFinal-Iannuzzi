@@ -32,6 +32,7 @@ export function CartContextProvider({ children }){
     };
 
     function removeItem(id){
+
       return  setCartList(cartList.filter(product=>product.id!==id))
     }
 
@@ -45,7 +46,8 @@ export function CartContextProvider({ children }){
     }
 
     function totalCartItems(){
-        const totalItems=cartList[0].id?cartList.map((product)=>{totalItems=totalItems + product.quantity}):0
+        
+        const totalItems=cartList.reduce((total,product)=>total + product.quantity,0)
         return totalItems
     }
 

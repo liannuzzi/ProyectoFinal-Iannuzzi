@@ -2,10 +2,13 @@ import React from 'react';
 import '../CartWidget/styles.css';
 import { FaShoppingCart } from 'react-icons/fa';
 
+
 function CartWidget() {
+
+
     return ( 
         <div>
-            <FaShoppingCart/>
+            <FaShoppingCart />
         </div>
      );
 }
