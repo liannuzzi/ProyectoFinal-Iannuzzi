@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCartContext } from '../../context/CartContext';
 import CartItem from '../CartItem';
 import '../Cart/styles.css'
@@ -7,7 +7,8 @@ import {Link} from 'react-router-dom';
 
 function Cart () {
 
-    const { cartList,cartTotal,clear,totalCartItems } = useCartContext();
+    const { cartList,cartTotal,clear,totalCartItems, purchaseConfirm } = useCartContext();
+    const user={name:'Lucas', phone:112233, email:'prueba@prueba.com'}
 
     return ( 
         <div className='cart-container'>
@@ -18,6 +19,7 @@ function Cart () {
             <div className='bottom-cart'>
                 <div>
                     <button className='cart-btns' onClick={()=>clear()}>Limpiar carrito</button>
+                    <button className='cart-btns' onClick={()=>purchaseConfirm(user)}>Finalizar compra</button>
                 </div>
                 <div className='totalizadores-container'>
                     <p>Total items: {totalCartItems()}</p>

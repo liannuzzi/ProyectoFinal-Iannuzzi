@@ -1,4 +1,5 @@
 import {createContext, useContext, useState } from "react";
+import {collection, addDoc, getFirestore, Timestamp} from 'firebase/firestore';
 
 export const CartContext=createContext({});
 
@@ -51,6 +52,27 @@ export function CartContextProvider({ children }){
         return totalItems
     }
 
+    function purchaseConfirm(usuario){
+
+        
+        console.log(cartList)
+
+        const db=getFirestore();
+        const orderCollection=collection(db,"orders");
+
+        const purchaseItems=cartList.map(({category,description,image,stock,... rest})=>rest)
+
+        const order={
+            buyer:{name:usuario.name, phone:usuario.phone, email:usuario.email},
+            items:purchaseItems,
+            date:Timestamp.fromDate(new Date()),
+            total:cartTotal()
+        }
+
+        addDoc(orderCollection,order).then(({id})=>console.log('Gracias por su compra, su codigo de orden es: '+ id))
+        console.log(order)
+    }
+
     return(
         <CartContext.Provider value={{ 
             cartList,
@@ -58,7 +80,8 @@ export function CartContextProvider({ children }){
             removeItem,
             clear,
             cartTotal,
-            totalCartItems
+            totalCartItems,
+            purchaseConfirm
              }}>
             {children}
         </CartContext.Provider>

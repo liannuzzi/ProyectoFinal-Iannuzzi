@@ -25,9 +25,6 @@ function ItemDetailContainer() {
     useEffect(() => {
         getItem(id)
         .then(snapshot=>{
-            // const id=snapshot.docs[0].id
-            // const obj=snapshot.docs[0].data()
-            // const objCompleto=()=>obj.push({id:id})
             setProduct(
                 {...snapshot.docs[0].data(),id:snapshot.docs[0].id}
             )
