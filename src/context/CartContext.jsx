@@ -74,7 +74,7 @@ export function CartContextProvider({ children }){
         }
 
         addDoc(orderCollection,order).then((doc)=>{SetId(doc.id)})
-        console.log(order)
+ 
     }
 
     return(

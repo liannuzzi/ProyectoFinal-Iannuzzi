@@ -36,7 +36,7 @@ function ItemDetail(  {item}  ) {
             </div>
             <div className='itemCount-Container'>
             {productQty==null || productQty===0?
-            <ItemCount stock={10} initial={0} onAdd={addCart} />:
+            <ItemCount stock={item.stock} initial={0} onAdd={addCart} />:
             <div>
             <Link to='/cart'><button className='finishPurchase-btn'>Ir al carrito</button></Link>
             <Link to='/'><button className='finishPurchase-btn'>Continuar Comprando</button></Link></div>
