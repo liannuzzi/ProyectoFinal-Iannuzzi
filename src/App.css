@@ -1,9 +1,13 @@
 *{
     margin:0px;
     padding: 0px;
+    
 }
 
 html,body{
-    background-color: #f5f6f7;
+    background-color: black;
 }
 
+.App{
+    background-color: black;
+}

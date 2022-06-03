@@ -1,5 +1,18 @@
 # E-commerce de comida
-    Proyecto orientado a la construcción de un E-commerce para una pizzería. Se utiliza JS, React js. y Bootstrap para su construcción.
+    Proyecto orientado a la construcción de un E-commerce para una pizzería. 
+    Para el desarrollo de la página se utilizó JS, React js. y Bootstrap.
+
+## Funcionalidades
+
+# Catalogo
+ El sitio cuenta con un catalogo donde se listan los productos disponibles junto con su información y una imagen. Tambien brinda la posibilidad de ingresar al detalle de item para agregar el mismo al carrito. 
+ Dentro del catalogo es posible aplicar filtros por categoría de productos. 
+
+ # Carrito
+ En el carrito se concentran todos los items agregados por el usuario y sus respectivas cantidades. Se puede visualizar el precio y el total de items, el carrito unicamente es visible cuando hay al menos un item agregado.
+
+# Generar pedido
+Para generar un pedido unicamente es necesario agregar items al carrito y confirmar la compra. La herramienta solicita al usuario que complete unos datos mandatorios para poder avanzar con la compra y posteriormente le presenta un codigo de orden. 
 
 
 

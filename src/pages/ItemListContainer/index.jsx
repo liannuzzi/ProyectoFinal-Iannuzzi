@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './styles.css';
-import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore';
+import {collection, getDocs, getFirestore, query, where, orderBy} from 'firebase/firestore';
 import ItemList from '../../components/ItemList';
 
 
@@ -16,7 +16,8 @@ function getProducts(category){
             where('category','==',category)
         ) :
         query(
-            itemCollection
+            itemCollection,
+            orderBy('orderby')
         );
 
         return getDocs(q)

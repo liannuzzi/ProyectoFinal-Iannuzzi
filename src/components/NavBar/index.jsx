@@ -37,7 +37,12 @@ function NavBar() {
                         <NavDropdown.Item><Link to={'/category/Postres'} className='default-link'>Postres</Link></NavDropdown.Item>
                         </NavDropdown>
                         {cartList.length!==0?
-                        <Nav.Link><Link to={'/cart'} className='default-home-link'><span>{totalCartItems()}<CartWidget/></span></Link></Nav.Link>:
+                        <Nav.Link><Link to={'/cart'} className='default-home-link'>
+                            <div className='cartIcon-container'>
+                                <CartWidget/>
+                                <span>{totalCartItems()}</span>
+                            </div>
+                        </Link></Nav.Link>:
                         ''}
                     </Nav>
                     </Navbar.Collapse>

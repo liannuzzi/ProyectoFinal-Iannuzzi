@@ -1,0 +1,5 @@
+.itemList-container{
+    background-color: black;
+    min-height:90vh;
+    max-height: max-content;
+}

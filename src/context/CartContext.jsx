@@ -9,6 +9,8 @@ export function useCartContext(){
 
 export function CartContextProvider({ children }){
     const [cartList,setCartList]=useState([]);
+    const [purchaseId,SetId]=useState('');
+    
 
 
     function isInCart(id){
@@ -41,6 +43,10 @@ export function CartContextProvider({ children }){
         return setCartList([])
     }
 
+    function clearPurchaseId(){
+        return SetId('')
+    }
+
     function cartTotal(){
         const total=cartList.reduce((total,product)=>total+(product.quantity*product.price),0)
         return total
@@ -55,12 +61,10 @@ export function CartContextProvider({ children }){
     function purchaseConfirm(usuario){
 
         
-        console.log(cartList)
-
         const db=getFirestore();
         const orderCollection=collection(db,"orders");
 
-        const purchaseItems=cartList.map(({category,description,image,stock,... rest})=>rest)
+        const purchaseItems=cartList.map(({category,description,image,stock,orderby,... rest})=>rest)
 
         const order={
             buyer:{name:usuario.name, phone:usuario.phone, email:usuario.email},
@@ -69,13 +73,15 @@ export function CartContextProvider({ children }){
             total:cartTotal()
         }
 
-        addDoc(orderCollection,order).then(({id})=>console.log('Gracias por su compra, su codigo de orden es: '+ id))
+        addDoc(orderCollection,order).then((doc)=>{SetId(doc.id)})
         console.log(order)
     }
 
     return(
-        <CartContext.Provider value={{ 
+        <CartContext.Provider value={{
+            purchaseId, 
             cartList,
+            clearPurchaseId,
             addItemToCart,
             removeItem,
             clear,
