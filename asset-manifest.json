@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/proyecto-final-Iannuzzi/static/css/main.a8a6a421.css",
+    "main.js": "/proyecto-final-Iannuzzi/static/js/main.776ad01d.js",
+    "index.html": "/proyecto-final-Iannuzzi/index.html",
+    "main.a8a6a421.css.map": "/proyecto-final-Iannuzzi/static/css/main.a8a6a421.css.map",
+    "main.776ad01d.js.map": "/proyecto-final-Iannuzzi/static/js/main.776ad01d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8a6a421.css",
+    "static/js/main.776ad01d.js"
+  ]
+}
