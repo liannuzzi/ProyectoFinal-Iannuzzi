@@ -1,5 +1,4 @@
 {
-  "homepage": "https://liannuzzi.github.io/proyecto-final-Iannuzzi/",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -19,8 +18,6 @@
     "webpack": "^5.72.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy":"gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
